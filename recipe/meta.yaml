@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy >=1.17.0
+    - numpy >=1.17.0,<2.0
     - ase >=3.19.0
     - scikit-learn >=1.2.0
 
