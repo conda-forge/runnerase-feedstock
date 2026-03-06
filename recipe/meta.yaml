@@ -1,5 +1,5 @@
 {% set name = "runnerase" %}
-{% set version = "0.3.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/runnerase-{{ version }}.tar.gz
-  sha256: 533a91bc25af203d01afbaae8d13db9e388b24572686422f02b3d7e2d82ff439
+  sha256: ff95b9f19874adf28b24e6e2d086d78027888ece86d84e1dc5e67af8dcbe8cbc
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -22,8 +22,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy >=1.17.0,<2.0
-    - ase >=3.19.0
+    - numpy >=1.17.0
+    - ase
     - scikit-learn >=1.2.0
 
 test:
